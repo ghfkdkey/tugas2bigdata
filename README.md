@@ -24,14 +24,14 @@ Repository ini berisi semua *notebook* yang digunakan untuk memenuhi tugas "End-
 Repository ini berisi empat *notebook* utama:
 
 ### 1. `dlt_pipeline_churn.ipynb`
-* **Tujuan:** Mendefinisikan *pipeline* ETL (Fase 2 & 3).
+* **Tujuan:** Mendefinisikan *pipeline* ETL.
 * **Isi:** Berisi kode Python dan dekorator `@dlt.table` untuk Arsitektur Medallion.
     * **Bronze Layer:** Membaca data CSV mentah secara inkremental dari *storage* menggunakan *Auto Loader* (`cloudFiles`).
     * **Silver Layer:** Membersihkan data (misal: konversi tipe data, menangani *null*) dan menerapkan aturan *data quality* (`@dlt.expect`).
     * **Gold Layer:** Mengagregasi data bersih menjadi tabel yang siap untuk *dashboarding*.
 
 ### 2. `Model_ML_Churn.ipynb`
-* **Tujuan:** Pelatihan, evaluasi, dan *deployment* model prediksi *churn* (Fase 4, 5, 6).
+* **Tujuan:** Pelatihan, evaluasi, dan *deployment* model prediksi *churn*.
 * **Isi:** *Pipeline* MLOps lengkap.
     * **Pemuatan Data:** Membaca data bersih dari tabel `churn_silver` DLT.
     * **EDA Visual:** Analisis data eksploratif dengan *heatmap* korelasi, *boxplot* *outlier*, dan plot fitur kategorikal.
@@ -48,7 +48,7 @@ Repository ini berisi empat *notebook* utama:
     * **Logging:** Mendaftarkan model *deep learning* ke *Model Registry*.
 
 ### 4. `Exploratory Data.ipynb`
-* **Tujuan:** Eksplorasi data awal (Fase 1).
+* **Tujuan:** Eksplorasi data awal.
 * **Isi:** Berisi kueri `%sql` sederhana yang digunakan untuk memvalidasi dan menjelajahi data mentah `wa_fn_use_c_telco_customer_churn` sebelum *pipeline* DLT dibuat.
 
 ---
